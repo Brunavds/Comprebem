@@ -23,7 +23,7 @@
         </div> 
         
         <a href=""><button type="submit" class="button">Entrar</button> </a>
-        <a href="cadastro.html"><button type="submit" class="button">Cadastre-se</button> </a>
+        <a href="cadastro.php"><button type="submit" class="button">Cadastre-se</button> </a>
    </div>
 
 </body>

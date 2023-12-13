@@ -24,11 +24,11 @@
                 <!--INICIO MENU NAVEGAÇÃO-->
                 <nav>
                     <ul id="MenuItens">
-                        <li><a href="index.html" title="">Inicio</a></li>
-                        <li><a href="produtos.html" title="">Produtos</a></li>
+                        <li><a href="index.php" title="">Inicio</a></li>
+                        <li><a href="produtos.php" title="">Produtos</a></li>
                         <li><a href="" title="">Empresa</a></li>
                         <li><a href="" title="">Contatos</a></li>
-                        <li><a href="" title="">Minha Conta</a></li>
+                        <li><a href="login.php" title="">Minha Conta</a></li>
                     </ul>
                 </nav>
                 <!--FIM MENU NAVEGAÇÃO-->
@@ -128,7 +128,7 @@
 
             <!--INICIO ITEM PRODUTOS EM DESTAQUE-->
             <div class="col-4">
-                    <a href="ver-produto.html" title="">
+                    <a href="ver-produto.php" title="">
                     <img src="assets/img/fla1.avif" alt="">
                     </a>
                 <h4>Camisa Adidas Flamengo I 2023 com Patrocínio</h4>

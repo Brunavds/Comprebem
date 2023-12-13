@@ -24,11 +24,11 @@
                 <!--INICIO MENU NAVEGAÇÃO-->
                 <nav>
                     <ul id="MenuItens">
-                        <li><a href="index.html" title="">Início</a></li>
-                        <li><a href="produtos.html" title="">Produtos</a></li>
+                        <li><a href="index.php" title="">Início</a></li>
+                        <li><a href="produtos.php" title="">Produtos</a></li>
                         <li><a href="" title="">Empresa</a></li>
                         <li><a href="" title="">Contatos</a></li>
-                        <li><a href="login.html" title="">Minha Conta</a></li>
+                        <li><a href="login.php" title="">Minha Conta</a></li>
                     </ul>
                 </nav>
                 <!--FIM MENU NAVEGAÇÃO-->
@@ -71,7 +71,7 @@
                 <div class="linha">
 
                     <div class="col-3">
-                        <a href="feminino.html" title="">
+                        <a href="feminino.php" title="">
                         <img src="assets/img/modelo1.jpg" alt="">
                         </a>
                         <h3 class="cat">Feminino</h3>
@@ -102,7 +102,7 @@
 
             <!--INICIO ITEM PRODUTOS EM DESTAQUE-->
             <div class="col-4">
-                <a href="ver-produto.html" title="">
+                <a href="ver-produto.php" title="">
                 <img src="assets/img/fla1.avif" alt="">
                 </a>
                 <h4>Camisa do Flamengo II 23 Masculina adidas</h4>
@@ -118,7 +118,7 @@
             <!--FIM ITEM PRODUTOS EM DESTAQUE-->
             <!--INICIO ITEM PRODUTOS EM DESTAQUE-->
             <div class="col-4">
-                <a href="ver-produto2.html" title="">
+                <a href="ver-produto2.php" title="">
                 <img src="assets/img/botafogo.webp" alt="">
                 </a>
                 <h4>Camisa Botafogo Retrô 1942 Multicores</h4>
@@ -150,7 +150,7 @@
             <!--FIM ITEM PRODUTOS EM DESTAQUE-->
             <!--INICIO ITEM PRODUTOS EM DESTAQUE-->
             <div class="col-4">
-                <a href="ver-produto.html" title="">
+                <a href="ver-produto.php" title="">
                 <img src="assets/img/fluminense.avif" alt="">
                 </a>
                 <h4>Camisa do Fluminense I 23 Masculina Umbro</h4>
