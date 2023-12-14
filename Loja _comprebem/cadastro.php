@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,8 @@
 
     <div class="card">
         <h2>Cadastre-se</h2>
-        <form action="" method="POST">
+        <!-- Seleciona o banco e alinha tudo -->
+        <form action="requests/request_cadastro.php" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Nome completo</label>
                 <input type="text" class="form-control" id="name" name="name" required>
@@ -29,7 +31,7 @@
             </div>
             <div class="mb-3">
                 <label for="endereco" class="form-label">Endereço</label>
-                <input type="text" class="form-control" id="text" name="text" required>
+                <input type="text" class="form-control" id="text" name="endereco" required>
             </div>
             <div class="mb-3">
                 <label for="endereco" class="form-label">Bairro</label>
