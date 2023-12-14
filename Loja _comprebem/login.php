@@ -26,7 +26,9 @@ if(isset($_SESSION['user_id'])){
 <body>
 
     <div class="container">
-        <img src="assets/img/logo compre.png" alt="Fundo login">
+        <div>
+            <a href="index.php"><img src="assets/img/logo compre.png" alt="Fundo login"></a>
+        </div>
 
         <div class="login">
 

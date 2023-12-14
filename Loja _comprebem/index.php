@@ -18,7 +18,7 @@
             <div class="navbar">
 
                 <div class="logo">
-                    <img src="assets/img/logo compre.png" alt="Loja CompreBem" width="125px">
+                    <a href="index.php"><img src="assets/img/logo compre.png" alt="Loja CompreBem" width="125px"></a>
                 </div>
 
                 <!--INICIO MENU NAVEGAÇÃO-->
@@ -33,7 +33,10 @@
                 </nav>
                 <!--FIM MENU NAVEGAÇÃO-->
 
-                <img src="assets/img/260.png" alt="" width="30px" height="30px">
+                
+                <div>
+                    <a href="sacola.html"> <img src="assets/img/260.png" alt="" width="30px" height="30px"> </a>
+                </div>
             
                 <img src="assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">
 
