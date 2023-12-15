@@ -35,7 +35,7 @@
 
                 
                 <div>
-                    <a href="sacola.html"> <img src="assets/img/260.png" alt="" width="30px" height="30px"> </a>
+                    <a href="sacola.php"> <img src="assets/img/260.png" alt="" width="30px" height="30px"> </a>
                 </div>
             
                 <img src="assets/img/menu.png" alt="" class="menu-celular" onclick="menucelular()">

@@ -17,9 +17,9 @@
             <!--INICIO NAVEGAÇÃO TOPO-->
             <div class="navbar">
 
-                <div class="logo">
-                    <img src="assets/img/logo compre.png" alt="Loja CompreBem" width="125px">
-                </div>
+            <div class="logo">
+                <a href="index.php"><img src="assets/img/logo compre.png" alt="Loja CompreBem" width="125px"></a>
+            </div>
 
                 <!--INICIO MENU NAVEGAÇÃO-->
                 <nav>
