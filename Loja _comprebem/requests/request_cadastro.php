@@ -2,7 +2,7 @@
 
 var_dump($_POST);
 
-include_once ('../Banco de dados/database.php');
+include_once ('../banco-_de_dados/database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
