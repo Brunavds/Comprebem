@@ -5,8 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
     <title>Document</title>
 </head>
 
@@ -16,7 +15,7 @@
     <div class="card">
         <h2>Cadastre-se</h2>
         <!-- Seleciona o banco e alinha tudo -->
-        <form action="requests/request_cadastro.php" method="POST">
+        <form action="../../request_cadastro.php" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Nome completo</label>
                 <input type="text" class="form-control" id="name" name="name" required>

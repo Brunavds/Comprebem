@@ -1,6 +1,6 @@
 <?php
 
-include_once ('../banco-_de_dados/database.php');
+include_once ('../../banco_de_dados/database.php');
 
 function adicionarProdutoAoCarrinho($produto_id, $quantidade, $preco) {
     // Se o carrinho não existir, crie um array vazio

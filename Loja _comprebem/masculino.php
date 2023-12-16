@@ -26,8 +26,8 @@
                     <ul id="MenuItens">
                         <li><a href="index.php" title="">Inicio</a></li>
                         <li><a href="produtos.php" title="">Produtos</a></li>
-                        <li><a href="" title="">Empresa</a></li>
-                        <li><a href="" title="">Contatos</a></li>
+                        <li><a href="empresa.php" title="">Empresa</a></li>
+                         <li><a href="contato.php" title="">Contatos</a></li>
                         <li><a href="login.php" title="">Minha Conta</a></li>
                     </ul>
                 </nav>
