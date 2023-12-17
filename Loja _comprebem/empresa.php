@@ -52,8 +52,8 @@
         </div>
         <!--FIM NAVEGAÇÃO TOPO-->
 
-
-<div>
+<nav class ="card">
+    <div class = "text">
     <h2>Lugar aonde moda e acessibilidade se encontram. As melhores marcas em um só lugar!</h2>
     <h4> Pensando em trazer o melhor para a baixada, os fundadores da compre bem se dedicam desde 2003 em sempre trazer produtos de qualidade 
         que cabem no bolso de todos. A meta é agradar nossos clientes de todos os gostos
@@ -62,19 +62,21 @@
 
  <img class = "img1" src="assets/img/reuniao.webp" alt="" srcset="reuniao" width="500px" height="500px">
 
-<div>
+<div class = "text">
     <h2>Bem mais que uma loja de roupas, seu lar!</h2>
     <h4>Ambientes climatizados trazem um conforto para nosso clientes que são parte da familia.</h4>
 </div>
 
  <img class = "img2" src="assets/img/agente.png" alt="" srcset="reuniao" width="500px" height="500px">
 
-<div>
+<div class = "text">
     <h2> Atendimento, qualidade, inovação e modernidades são alguns de nossos diferencias.</h2>
     <h4>Foco no atendimento diferenciado e humanitario, inovação e modernidade em nossas peças para trazer conforto e beleza.
         Sempre atento aos pedidos dos nossos clientes.
     </h4>
 </div>
+
+</nav>
 
 
 
