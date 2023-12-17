@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fl.css">
     <title>Empresa</title>
 </head>
 <body>
@@ -51,11 +52,87 @@
         </div>
         <!--FIM NAVEGAÇÃO TOPO-->
 
+         <div class="mb1">
+            <h1 class= "text">Fale Conosco</h1> 
+           
+            
+
+            <div class="cont">
+            <p>Se você tem duvidas ou suguestões entra em contato conosco através de :</p> 
+            <h4 class = "text1">Email: loja_comprebem@gmail.com</h4>
+            <h4 class = "text1">WhatsApp: (21) 3352-7125 </h4>
+             
+            
+            <p class="p">Siganos também nas redes sociais</p>
+
+            <h4 class = "text1">Instagran: @Comprebem </h4>
+            <h4 class = "text1"> Facebook: CompreBem </h4>
+            </div>
+
+            <div>
+                <img class="img"src="assets/img/agente.jpg" alt="agente">
+            </div>
 
 
+            
+        
+         </div>                  
 
 
+ <!--INCIO RODAPÉ-->
+ <footer class="rodape">
 
+<div class="container">
+    <div class="linha">
+
+        <div class="rodape-col-1">
+        <h3>Baixe o nosso app</h3>
+        <p>Baixe nosso app para Android e IOS</p>
+        <div class="app-logo">
+            <img src="assets/img/google.png" alt="">
+            <img src="assets/img/apple.png" alt="">
+        </div>
+        </div>
+
+        <div class="rodape-col-2">
+            <img src="assets/img/logo compre.png" alt="">
+            <p>Loja CompreBem © 2023. Todos os direitos reservados.</p>
+        </div>
+
+        <div class="rodape-col-3">
+            <h3>Mais Informações</h3>
+            <ul>
+                <li>Cupons</li>
+                <li>Blog</li>
+                <li>Política de Privacidade</li>
+                <li>Contatos</li>
+            </ul>
+        </div>
+
+        <div class="rodape-col-4">
+            <h3>Redes Sociais</h3>
+            <ul>
+                <li>Facebook <ion-icon name="logo-facebook"></ion-icon></li>
+                <li>Twitter <ion-icon name="logo-twitter"></ion-icon></li>
+                <li>Instagram <ion-icon name="logo-instagram"></ion-icon></li>
+                <li>Youtube <ion-icon name="logo-youtube"></ion-icon></li>
+            </ul>
+            </div>
+
+    </div>
+    <hr>
+    <p class="direitos">
+        &#169; Todos os direitos reservados a Loja CompreBem.</p>
+    </p>    
+</div>
+
+</footer>
+<!--FIM RODAPÉ-->
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="assets/js/app.js"></script>
       
 
 </body>

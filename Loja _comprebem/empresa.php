@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/empresa.css">
     <title>Empresa</title>
 </head>
 <body>
@@ -52,32 +53,87 @@
         <!--FIM NAVEGAÇÃO TOPO-->
 
 
+<div>
+    <h2>Lugar aonde moda e acessibilidade se encontram. As melhores marcas em um só lugar!</h2>
+    <h4> Pensando em trazer o melhor para a baixada, os fundadores da compre bem se dedicam desde 2003 em sempre trazer produtos de qualidade 
+        que cabem no bolso de todos. A meta é agradar nossos clientes de todos os gostos
+    </h4>
+</div> 
 
-        <div class="carde" style="width: 18rem;">
-  <img src="assets/img/fachada.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Lugar aonde moda e acessibilidade se encontram. As melhores marcas em um só lugar!</p>
-  </div>
+ <img class = "img1" src="assets/img/reuniao.webp" alt="" srcset="reuniao" width="500px" height="500px">
+
+<div>
+    <h2>Bem mais que uma loja de roupas, seu lar!</h2>
+    <h4>Ambientes climatizados trazem um conforto para nosso clientes que são parte da familia.</h4>
+</div>
+
+ <img class = "img2" src="assets/img/agente.png" alt="" srcset="reuniao" width="500px" height="500px">
+
+<div>
+    <h2> Atendimento, qualidade, inovação e modernidades são alguns de nossos diferencias.</h2>
+    <h4>Foco no atendimento diferenciado e humanitario, inovação e modernidade em nossas peças para trazer conforto e beleza.
+        Sempre atento aos pedidos dos nossos clientes.
+    </h4>
 </div>
 
 
-<div class="carde" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Bem mais que uma loja de roupas, seu lar!</div>
 
 
-<div class="carde" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Atendimento, qualidade, inovação e modernidades são alguns de nossos diferencias .</p>
-  </div>
+ <!--INCIO RODAPÉ-->
+ <footer class="rodape">
+
+<div class="container">
+    <div class="linha">
+
+        <div class="rodape-col-1">
+        <h3>Baixe o nosso app</h3>
+        <p>Baixe nosso app para Android e IOS</p>
+        <div class="app-logo">
+            <img src="assets/img/google.png" alt="">
+            <img src="assets/img/apple.png" alt="">
+        </div>
+        </div>
+
+        <div class="rodape-col-2">
+            <img src="assets/img/logo compre.png" alt="">
+            <p>Loja CompreBem © 2023. Todos os direitos reservados.</p>
+        </div>
+
+        <div class="rodape-col-3">
+            <h3>Mais Informações</h3>
+            <ul>
+                <li>Cupons</li>
+                <li>Blog</li>
+                <li>Política de Privacidade</li>
+                <li>Contatos</li>
+            </ul>
+        </div>
+
+        <div class="rodape-col-4">
+            <h3>Redes Sociais</h3>
+            <ul>
+                <li>Facebook <ion-icon name="logo-facebook"></ion-icon></li>
+                <li>Twitter <ion-icon name="logo-twitter"></ion-icon></li>
+                <li>Instagram <ion-icon name="logo-instagram"></ion-icon></li>
+                <li>Youtube <ion-icon name="logo-youtube"></ion-icon></li>
+            </ul>
+            </div>
+
+    </div>
+    <hr>
+    <p class="direitos">
+        &#169; Todos os direitos reservados a Loja CompreBem.</p>
+    </p>    
 </div>
 
+</footer>
+<!--FIM RODAPÉ-->
 
 
-
-
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="assets/js/app.js"></script>
+      
       
 
 </body>
