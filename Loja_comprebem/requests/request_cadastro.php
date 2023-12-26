@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-include_once('../../banco_de_dados/database.php');
+include_once('../banco_de_dados/database.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
@@ -15,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $connection = connectDatabase();
 
     // Usar prepared statements para proteger contra SQL injection
-    $query = "INSERT INTO users (name, email, password, level) VALUES (?, ?, ?, 'common')";
+    $query = "INSERT INTO users (name, email, cpf, endereco, bairro, cidade, estado, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($connection, $query);
 
-    mysqli_stmt_bind_param($stmt, "sss", $name, $email, $password_hashed);
+    mysqli_stmt_bind_param($stmt, "ssssssss", $name, $email, $cpf, $endereco, $bairro, $cidade, $estado, $password_hashed);
 
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
@@ -35,14 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Redirecionar para admin/index.php
         header("Location: ../Loja_Comprebem/index.php");
-        exit(); // Certifique-se de sair após o redirecionamento
+        mysqli_stmt_close($stmt);
+        mysqli_close($connection);
+        // Certifique-se de sair após o redirecionamento
     } else {
         // Em caso de erro, redirecione para uma página de erro ou forneça uma mensagem amigável
         header("Location: 404.php");
-        exit();
+        mysqli_stmt_close($stmt);
+        mysqli_close($connection);
     }
-
-    mysqli_stmt_close($stmt);
-    mysqli_close($connection);
 }
 ?>

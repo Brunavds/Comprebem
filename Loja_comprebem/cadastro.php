@@ -15,7 +15,7 @@
     <div class="card">
         <h2>Cadastre-se</h2>
         <!-- Seleciona o banco e alinha tudo -->
-        <form action="Loja_comprebem/requests/request_cadastro.php" method="POST">
+        <form action="requests/request_cadastro.php" method="POST">
             <div class="mb-3">
                 <label for="name" class="form-label">Nome completo</label>
                 <input type="text" class="form-control" id="name" name="name" required>

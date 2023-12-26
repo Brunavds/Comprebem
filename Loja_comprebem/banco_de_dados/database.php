@@ -4,7 +4,7 @@ function connectDatabase(){
     $server = 'localhost';
     $user = 'root';
     $password = '';
-    $database = 'compre_bem.sql';
+    $database = 'compre_bem';
 
     $connection = mysqli_connect($server, $user, $password, $database);
 
