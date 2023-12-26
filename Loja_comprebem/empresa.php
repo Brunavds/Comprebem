@@ -24,7 +24,7 @@ include_once ('adm/header.php');
 </div> 
 
    <div> 
-        <img class = "img1" src="assets/img/liderança.webp" alt="" srcset="reuniao" width="500px" height="500px">
+        <img class = "img1" src="assets/img/lideranca.jpg" alt=""  width="700px" height="500px">
     </div> 
 
 <div class = "textemp">
@@ -34,7 +34,7 @@ include_once ('adm/header.php');
 </div>
 
    <div>
-        <img class = "img2" src="..\Imagens\f3.3.png" alt="" srcset="reuniao" width="500px" height="500px">
+        <img class = "img2" src="assets/img/reuniao.webp" alt=""  width="700px" height="500px">
     </div>
 
 <div class = "textemp">
