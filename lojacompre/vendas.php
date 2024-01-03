@@ -18,9 +18,10 @@
 </head>
 <body>
     <h2>Lista de Vendas</h2>
-    <table border="1">
+    <table class="table">
         <tr>
             <th>ID Venda</th>
+            <th>ID Cliente</th>
             <th>ID Produto</th>
             <th>Quantidade</th>
             <th>Total</th>
@@ -45,6 +46,7 @@
         while ($venda = $resultado->fetch(PDO::FETCH_ASSOC)) {
             echo "<tr>";
             echo "<td>{$venda['id_venda']}</td>"; 
+            echo "<td>{$venda['id_cliente']}</td>"; 
             echo "<td>{$venda['id_produto']}</td>";
             echo "<td>{$venda['qtd_produto']}</td>";
             echo "<td>{$venda['vl_produto']}</td>";
@@ -55,5 +57,9 @@
 
         ?>
     </table>
+
+    <a href="pdf.php" style="text-decoration:none;">			
+    <button type="submit" class="btn btn-block btn-lg btn-primary"> Gerar Arquivo </button>
+    </a>
 </body>
 </html>

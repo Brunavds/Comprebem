@@ -13,6 +13,52 @@
     <!-- JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="estilo.css">
+
+	<style>
+        /* Estilos para centralizar e estilizar o popup */
+        #popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: yellowgreen;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #popup-image {
+            max-width: 100%;
+            max-height: 200px; /* Defina a altura máxima desejada para a imagem */
+        }
+
+		#close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+		}	
+    </style>
+
+	<script>
+		// Função para fechar o popup
+        function fecharPopup() {
+            var popup = document.getElementById('popup-container');
+            popup.style.display = 'none';
+        }
+        // Função para exibir o popup ao carregar a página
+        window.onload = function() {
+            // Seleciona o elemento do popup
+            var popup = document.getElementById('popup-container');
+
+            // Exibe o popup
+            popup.style.display = 'block';
+        };
+    </script>
+
 </head>
 <body>
     <?php 
@@ -59,6 +105,19 @@
 	</div><!-- fechamento da class="container-fluid" -->
 	<br>
 	<br>
-    <?php include 'rodape.html' ?>
+    <?php include 'rodape.html' ?> 
+
+
+		<!-- Elemento de popup -->
+		<div id="popup-container">
+		<span id="close-button" onclick="fecharPopup()">X</span>
+        <h2>
+			Bem-vindo à nossa página!
+			Venha nos visitar na loja fisica!
+		</h2>
+        <img id="popup-image" src="../lojacompre/Logos/localização.png" alt="Imagem de boas-vindas">
+
+		<h2> Av. Ademar de Barros, 1882, Guarujá </h2>
+    </div>
 </body>
 </html>
