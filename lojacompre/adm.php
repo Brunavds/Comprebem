@@ -42,6 +42,9 @@
                 <a href="vendas.php" style="text-decoration:none;">
 				<button type="submit" class="btn btn-block btn-lg btn-success"> Vendas</button>
                 <br>
+                <a href="clientesCadastro.php" style="text-decoration:none;">
+				<button type="submit" class="btn btn-block btn-lg btn-success"> Gerenciamento Clientes </button>
+                <br>
                 <a href="sair.php" style="text-decoration:none;">
 				<button type="submit" class="btn btn-block btn-lg btn-danger"> Sair da àrea administrativa</button>
                 </a>

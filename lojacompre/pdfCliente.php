@@ -5,7 +5,7 @@ require_once '../dompdf/autoload.inc.php';
 
 
 // Consulta SQL
-$sql = "SELECT * FROM tbl_vendas";
+$sql = "SELECT * FROM tbl_usuario";
 
 // Executando a consulta
 $res = $conn->query($sql);
@@ -15,14 +15,15 @@ if ($res->num_rows > 0) {
     $html = "<table border='1'>";
     while ($row = $res->fetch_object()) {
         $html .= "<tr>";
-        $html .= "<td>" . $row->id_venda . "</td>";
-        $html .= "<td>" . $row->nm_ticket . "</td>";
-        $html .= "<td>" . $row->id_cliente . "</td>";
-        $html .= "<td>" . $row->id_produto . "</td>";
-        $html .= "<td>" . $row->qtd_produto . "</td>";
-        $html .= "<td>" . $row->vl_produto . "</td>";
-        $html .= "<td>" . $row->vl_total . "</td>";
-        $html .= "<td>" . $row->data_venda . "</td>";
+        $html .= "<td>" . $row->id_usuario . "</td>";
+        $html .= "<td>" . $row->nm_usuario . "</td>";
+        $html .= "<td>" . $row->sbnm_usuario . "</td>";
+        $html .= "<td>" . $row->cell_usuario . "</td>";
+        $html .= "<td>" . $row->desc_email . "</td>";
+        $html .= "<td>" . $row->desc_status . "</td>";
+        $html .= "<td>" . $row->desc_endereco . "</td>";
+        $html .= "<td>" . $row->desc_cidade . "</td>";
+        $html .= "<td>" . $row->num_cep . "</td>";
         $html .= "</tr>";
     }
     $html .= "</table>";
