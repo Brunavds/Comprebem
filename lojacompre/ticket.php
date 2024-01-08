@@ -42,7 +42,9 @@
             <div class="col-sm-2"><h4>Ticket </h4></div>
             <div class="col-sm-5"><h4>Produto</h4></div>
             <div class="col-sm-1"><h4>Quantidade</h4></div>
-            <div class="col-sm-2"><h4>Preço</h4></div>	
+            <div class="col-sm-2"><h4>Preço</h4></div>
+            <div class="col-sm-2"><h4>Data</h4></div>
+            <div class="col-sm-2"><h4>Forma de pagamento</h4></div>
         </div>
         <?php
         $total=0; // criando variavel chamado total
@@ -55,6 +57,8 @@
             <div class="col-sm-2"><b> <?php echo $exibeVenda['nm_ticket'] ?></b></div>
             <div class="col-sm-5"><b> <?php echo $exibeVenda['nm_nome'] ?></b></div>
             <div class="col-sm-1"><b> <?php echo $exibeVenda['qtd_produto'] ?></b></div>
+            <div class="col-sm-1"><b> <?php echo $exibeVenda['data_venda'] ?></b></div>
+            <div class="col-sm-1"><b> <?php echo $exibeVenda['meio_pagamento'] ?></b></div>
             <div class="col-sm-2"><b> R$ <?php echo number_format($exibeVenda['vl_total'],2,',','.') ?></b></div>	
         </div>
         <?php } ?>

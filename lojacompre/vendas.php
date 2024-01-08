@@ -26,6 +26,7 @@
             <th>Quantidade</th>
             <th>Total</th>
             <th>Data</th>
+            <th>Forma de Pagamento</th>
         </tr>
         <?php
         
@@ -51,6 +52,7 @@
             echo "<td>{$venda['qtd_produto']}</td>";
             echo "<td>{$venda['vl_produto']}</td>";
             echo "<td>{$venda['data_venda']}</td>";
+            echo "<td>{$venda['meio_pagamento']}</td>";
             echo "</tr>";
         }
        /*  os valores de venda deve ter o mesmo nome da tabela que esta chamando  */
