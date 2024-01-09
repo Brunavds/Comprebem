@@ -27,6 +27,17 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4 text-center">
+			<h2>Clique para gerar sua nota</h2>
+			<a href="notafiscal.php"><button class="btn btn-lg btn-success">Gerar Nota</button></a>
+			</div>
+		
+		</div>
+	</div>
+
 	<br>
 	<?php include 'rodape.html' ?>
 </body>

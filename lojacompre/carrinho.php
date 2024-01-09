@@ -13,10 +13,32 @@
     <!-- JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="estilo.css">
+
+	<style> /* Função para mostrar opções de parcelamento  */
+		#parcelamento {
+			display: none;
+		}
+	</style> 
+
+	<script>
+		function mostrarParcelamento (){
+			let metodoPagamento = document.getElementById("metodoPagamento");
+			let parcelamento = document.getElementById ("parcelamento");
+
+			if(metodoPagamento.value === "credito"){
+				parcelamento.style.display = "block";
+			}else{
+				parcelamento.style.display = "none";
+			}
+		}
+	</script>
 </head>
 <body>	
 	
 	<?php
+
+use Dompdf\Options;
+
 	session_start(); // iniciando sessão
 	// verificando se usuário está logado
 	if(empty($_SESSION['ID'])){
@@ -55,7 +77,37 @@
 		//mostrando o carrinho	vazio	
 		include 'mostraCarrinho.php';
 	}	
-	?>
+	?> 
+
+	<!-- selecionar Forma de pagamento -->
+<div class="row text-center" style="margin-top: 15px;"> 
+    <h3>Selecione a forma de pagamento:</h3>
+    <select name="pagamento" id="metodoPagamento" onchange="mostrarParcelamento()" class="btn btn-lg btn-primary">
+        <option value="dinheiro">Dinheiro</option>
+        <option value="pix">Pix</option>
+        <option value="debito">Cartão de Débito</option>
+        <option value="credito">Cartão de Crédito</option>
+    </select>
+	
+        <!-- Mostrar opções de parcelamento apenas se a forma de pagamento for crédito -->
+        <div id= "parcelamento">
+			<select name="parcela" id="numeroParcelas" class="btn btn-lg btn-primary">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        	</select>
+		</div>
+    
+</div>
+
+
 	<!-- exibindo o valor da variavel total da compra -->
 	<div class="row text-center" style="margin-top: 15px;">
 		<h1><b>Total: R$ <?php echo number_format($total,2,',','.'); ?></b></h1>
