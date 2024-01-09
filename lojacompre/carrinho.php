@@ -64,7 +64,7 @@
 		<a href="index.php"><button class="btn btn-lg btn-primary">Continuar Comprando</button></a>
 
         <?php if(count($_SESSION['carrinho']) > 0) { ?>
-		<a href="formPagamento.php"><button class="btn btn-lg btn-success">Finalizar Compra</button></a>
+		<a href="finalizarCompra.php"><button class="btn btn-lg btn-success">Finalizar Compra</button></a>
         <?php } ?>
 	</div>
 </div>

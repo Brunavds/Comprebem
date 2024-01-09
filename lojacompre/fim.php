@@ -18,15 +18,10 @@
 <?php
 	include 'conexao.php';	
 	include 'nav.php';
-	include 'cabecalho.html'; 
+	include 'cabecalho.html';
 	?>
 	<div class="container-fluid">
-		<div class="row"> 
-
-		<div class="col-sm-4 col-sm-offset-4 text-center">
-				<h2><?php echo $metodoPagamento;?></h2>							
-			</div>
-
+		<div class="row">
 			<div class="col-sm-4 col-sm-offset-4 text-center">
 				<h2>Compra efetuada com sucesso, seu pedido será entregue em até 10 dias úteis!!<br><br> Seu número de registro é: <b><?php echo $ticket; ?></b></h2>							
 			</div>
