@@ -12,7 +12,19 @@ $res = $conn->query($sql);
 
 // Verificando se há resultados
 if ($res->num_rows > 0) {
-    $html = "<table border='1'>";
+    $html = "<table style= border='1' 'border: #000000 2px; text-align:center;'>";
+    $html = "<table>";
+    $html .= "<tr style = 'margin-top:5px;'>
+            <th>N° Id Venda</th>
+            <th>Nº Ticket</th>
+            <th>Id Cliente</th>
+            <th>Id Produto</th>
+            <th>Qtd</th>
+            <th>Valor Produto</th>
+            <th>Total</th>
+            <th>Data</th>
+            </tr>";
+            
     while ($row = $res->fetch_object()) {
         $html .= "<tr>";
         $html .= "<td>" . $row->id_venda . "</td>";

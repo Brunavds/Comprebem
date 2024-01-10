@@ -4,17 +4,27 @@ include_once 'config.php';
 require_once '../dompdf/autoload.inc.php';
 
 
+$nota = $_GET['id_nota'];
 // Consulta SQL
-$sql = "SELECT * FROM vw_venda WHERE nm_ticket";
+$sql = "SELECT * FROM vw_venda WHERE nm_ticket = '$nota'";
 
 // Executando a consulta
-$res = $conn->query($sql);
+$res = $conn->query($sql); 
 
 // Verificando se há resultados
 if ($res->num_rows > 0) {
-    $html = "<table border='1'>";
+    $html = "<table style=' border: #000000 2px; text-align:center;'>";
+    $html .= "<tr style = 'margin-top:5px;'>
+            <th>N° Cliente</th>
+            <th>Nº Ticket</th>
+            <th>Data</th>
+            <th>Qtd</th>
+            <th>Valor</th>
+            <th>Produto</th>
+            </tr>";
+
     while ($row = $res->fetch_object()) {
-        $html .= "<tr>";
+        $html .= "<tr margin-top: 5px; >";
         $html .= "<td>" . $row->id_cliente . "</td>";
         $html .= "<td>" . $row->nm_ticket. "</td>";
         $html .= "<td>" . $row->data_venda . "</td>";

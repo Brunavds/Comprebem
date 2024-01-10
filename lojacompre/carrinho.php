@@ -79,6 +79,7 @@ use Dompdf\Options;
 	}	
 	?> 
 
+
 	<!-- selecionar Forma de pagamento -->
 <div class="row text-center" style="margin-top: 15px;"> 
     <h3>Selecione a forma de pagamento:</h3>
