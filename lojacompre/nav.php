@@ -19,12 +19,9 @@
                 <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="categorias.php?cat=Peita">Blusas</a></li>
-                    <li><a href="categorias.php?cat=Infantil">Infantil</a></li>
-                    <li><a href="categorias.php?cat=Calça">Calças</a></li>
-                    <li><a href="categorias.php?cat=Casaco">Casaco</a></li>
+                    <li><a href="categorias.php?cat=Peita">Masculino</a></li>
                     <li><a href="categorias.php?cat=Feminino">Feminino</a></li>
-                    <li><a href="categorias.php?cat=Acessorios">Acessórios</a></li>
+                    <li><a href="categorias.php?cat=Infantil">Infantil</a></li>
                 </ul>
                 </li>
                 <li class="dropdown">

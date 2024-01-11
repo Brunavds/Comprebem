@@ -84,25 +84,26 @@ use Dompdf\Options;
 <div class="row text-center" style="margin-top: 15px;"> 
     <h3>Selecione a forma de pagamento:</h3>
     <select name="pagamento" id="metodoPagamento" onchange="mostrarParcelamento()" class="btn btn-lg btn-primary">
-        <option value="dinheiro">Dinheiro</option>
+        <option value="boleto">Boleto</option>
         <option value="pix">Pix</option>
         <option value="debito">Cartão de Débito</option>
         <option value="credito">Cartão de Crédito</option>
+        <option value="picpay">PicPay</option>
     </select>
 	
         <!-- Mostrar opções de parcelamento apenas se a forma de pagamento for crédito -->
         <div id= "parcelamento">
 			<select name="parcela" id="numeroParcelas" class="btn btn-lg btn-primary">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
+            <option value="1">À Vista</option>
+            <option value="2">2x Sem Juros</option>
+            <option value="3">3x Sem Juros</option>
+            <option value="4">4x Sem Juros</option>
+            <option value="5">5x Sem Juros</option>
+            <option value="10">10x Sem Juros</option>
+            <option value="20">20x Sem Juros</option>
+            <option value="30">30x Sem Juros</option>
+            <option value="40">40x Sem Juros</option>
+            <option value="50">50x Sem Juros</option>
         	</select>
 		</div>
     

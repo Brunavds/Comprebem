@@ -22,10 +22,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: yellowgreen;
+            background-color: #FFD700;
             padding: 20px;
             text-align: center;
-            border: 1px solid #ccc;
+            border: 2px solid #000000;
+            border-radius: 25px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
