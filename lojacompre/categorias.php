@@ -21,9 +21,8 @@
 	include 'nav.php';
     include 'cabecalho.html';
 	$cat = $_GET['cat'];	
-	?>
+?>
 	<div class="container-fluid text-center">
-		<h1 style="font-size:3.5vw; color: #000; text-shadow: 1px 1px 0px #fdeb00; letter-spacing: 5px;"><?php echo mb_strtoupper($cat)?></h1>
 			<div class="row">
 				<?php $Consulta = $cn -> query("select * from vw_produto where nm_categoria = '$cat'"); 
 					while($Exibir = $Consulta -> fetch(PDO::FETCH_ASSOC))
