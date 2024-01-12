@@ -115,7 +115,9 @@ use Dompdf\Options;
 <?php 
 
 } else{
-	echo '<div class="row text-center" style="margin-top: 15px;">Faça suas compras e aproveite nossa facilidade de pagamento em até 50 vezes sem juros! </div>';
+	echo '<div class="row text-center " style="margin-top: 15px;">
+		<p style="font-size: 25px;">Faça suas compras e aproveite nossa facilidade de pagamento em até 50 vezes sem juros! </p>
+	</div>';
 }
 ?>
 

@@ -45,6 +45,10 @@
                 <a href="clientesCadastro.php" style="text-decoration:none;">
 				<button type="submit" class="btn btn-block btn-lg btn-success"> Gerenciamento Clientes </button>
                 <br>
+                <a href="nvcategoria.php" style="text-decoration:none;">			
+				<button type="submit" class="btn btn-block btn-lg btn-primary"> Adicionar Categoria</button>
+				</a>
+                <br>
                 <a href="sair.php" style="text-decoration:none;">
 				<button type="submit" class="btn btn-block btn-lg btn-danger"> Sair da àrea administrativa</button>
                 </a>

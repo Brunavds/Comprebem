@@ -25,7 +25,7 @@ if ($res->num_rows > 0) {
 
     while ($row = $res->fetch_object()) {
         $html .= "<tr margin-top: 5px; >";
-        $html .= "<td>" . $row->id_cliente . "</td>";
+        $html .= "<td>" . $row->nm_usuario . "</td>";
         $html .= "<td>" . $row->nm_ticket. "</td>";
         $html .= "<td>" . $row->data_venda . "</td>";
         $html .= "<td>" . $row->qtd_produto . "</td>";
