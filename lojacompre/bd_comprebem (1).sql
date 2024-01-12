@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08/01/2024 às 22:29
+-- Tempo de geração: 12/01/2024 às 01:41
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -37,14 +37,9 @@ CREATE TABLE `tbl_categoria` (
 --
 
 INSERT INTO `tbl_categoria` (`id_categoria`, `nm_categoria`) VALUES
-(1, 'Peita'),
-(2, 'Calça'),
-(3, 'Blusa'),
-(4, 'Acessórios'),
-(5, 'Casaco '),
-(6, 'Malha'),
-(7, 'Infantil'),
-(8, 'Intimo');
+(2, 'Feminino'),
+(3, 'Infantil'),
+(9, 'Masculino');
 
 -- --------------------------------------------------------
 
@@ -97,25 +92,9 @@ CREATE TABLE `tbl_produtos` (
 --
 
 INSERT INTO `tbl_produtos` (`id_produto`, `nm_nome`, `ds_resumo_produto`, `vl_produto`, `nm_color_produto`, `nm_artigo`, `ds_img`, `id_marca`, `id_categoria`, `qtd_estoque`, `prod_lanc`) VALUES
-(1, 'Camiseta Chronic - Skull', 'Camiseta Plus Size, 100% algodão', 140.00, 'Preto', '1.22', 'Chronic Skull P.png', 1, 1, 10, 'S'),
-(2, 'Camiseta Wanted - OL', 'Camiseta Plus Size em 100% algodão', 159.90, 'Branco', '1.22', 'Wanted OL.png', 3, 1, 10, 'N'),
-(3, 'Camiseta Diamond - Bunny', 'Camiseta Plus Size em 100% algodão', 189.90, 'Preto', '1.22', 'Diamond Bunny.png', 6, 1, 10, 'N'),
-(4, 'Camiseta Santa Cruz - Scream', 'Camiseta Plus Size em 100% algodão', 190.00, 'Branco', '1.22', 'SC Scream B.png', 9, 1, 10, 'N'),
-(5, 'Calça Cargo Fire', '100% Algodão', 129.90, 'Preto', '1.22', 'Fire Cargo P.png', 7, 2, 10, 'S'),
-(6, 'Calça Overcome - Strip', '100% Poliéster', 189.90, 'Preto e Branco', '1.22', 'Overcome Strip.png', 8, 2, 10, 'N'),
-(7, 'Calça Santa Cruz - Painters', 'Sarja', 21000.00, 'Azul Marinho', '1.22', '4888a53610d85cceaffb84b040075b48.png', 9, 2, 10, 'N'),
-(9, 'Casaco Corta Vento Nike', '100% de fibras de poliéster recicladas', 99999.99, 'Preto', '1.22', 'Corta Vento Nike.png', 2, 5, 10, 'N'),
-(10, 'Casaco Moletom Diamond Careca', '50% algodão e 50% poliéster', 99999.99, 'Preto', '1.22', 'Moletom Diamond.png', 6, 5, 0, 'N'),
-(11, 'Casaco Moletom Wanted', '100% algodão', 99999.99, 'Preto', '1.22', 'Moletom Wanted.png', 3, 5, 10, 'N'),
-(12, 'Casaco Moletom High', '100% algodão', 99999.99, 'Branco', '1.22', 'Moletom High.png', 4, 5, 10, 'S'),
-(13, 'Five Panel Chronic', 'Boné estilo Five Panel', 80.00, 'Preto', '1.22', 'Five Panel Chronic.png', 1, 4, 10, 'S'),
-(14, 'Shoulder Big Bag Fire', '100% poliéster', 139.90, 'Preto', '1.22', 'Shoulder Bag Fire.png', 7, 4, 10, 'N'),
-(15, 'Chinelo Overcome', 'Tira única', 79.90, 'Preto', '1.22', 'Chinelo Overcome.png', 8, 4, 10, 'N'),
-(16, 'Cordão Wanted', 'Fecho abre fácil', 2000.00, 'Preto', '1.22', '03fd8c4c9cc546b41f2d3ffb8811ca5c.png', 3, 4, 10, 'N'),
-(17, 'Casaco Cat Rosa Feminino', 'Casaco 100% algodão, estampa de gato, disponível somente na cor rosa, do PP ao XG.', 105.00, 'Rosa', '1.20', '837e9338502b987902983583b6400ec5.jpg', 6, 5, 20, 'S'),
 (21, 'Calça Feminina Fitness', 'Calça Feminina Fitness Premium Academia Tarelles\r\nTecido: Suplex de Poliamida / Beach Gloss de Poliamida\r\nTecido de excelente qualidade e elasticidade\r\nTecido toque suave e brilho\r\nProteção UV 50\r\nCosturas reforçadas\r\nZero transparência\r\nNão possui bolso\r\n\r\nComposição: 84% Poliamida 16% Elastano', 26.00, 'Cinza e preto', '1,22', '901092c6e59413c5bca4e9365d7361f0.jpg', 2, 2, 15, 'N'),
-(22, 'Conjunto infantil Marrie verão', 'Roupas para bebês meninas verão roupas femininas manga mosca cor lisa top saia canelada 2 peças para crianças  de até 6 anos.', 79.19, 'Rosa e Braco', '1,22', '16a9b1be52bea4e0135e2e4f879cff85.jpg', 3, 7, 30, 'S'),
-(23, 'Conjunto Infantil Esportivo', 'Conjunto Roupa Infantil Menino Verão Camiseta e Shorts Kit Masculino - Azul', 135.00, 'Rosa e Braco', '1,22', 'c31d44a96bdfcca2c6e39b672295fe43.jpg', 2, 7, 30, 'N');
+(24, 'Conjunto Mariana Rosa Infantil', 'Conjunto Infantil Mariana rosa com blusa branca de manga croc. Disponível para crianças de 3 a 7 anos.', 59.00, 'Rosa e Branco', '1,00', '451e9740a859e9b5ce48479abc0249a2.jpg', 6, 3, 20, 'S'),
+(25, 'Casaco Corta Vento Nike', 'Corta vento Nike com fecho duplo. Disponível do P ao GG.', 12500.00, 'Branco e Preto', '1,22', '9eb1b948b5a5cc23ab8da03b55af9864.png', 2, 9, 100, 'N');
 
 -- --------------------------------------------------------
 
@@ -172,7 +151,32 @@ INSERT INTO `tbl_vendas` (`id_venda`, `nm_ticket`, `id_cliente`, `id_produto`, `
 (2, '658d93e10a0fa', 2, 5, 1, 129.90, 129.90, '2023-12-28', NULL),
 (3, '658d946f8323f', 2, 3, 1, 189.90, 189.90, '2023-12-28', NULL),
 (4, '658d946f8323f', 2, 5, 1, 129.90, 129.90, '2023-12-28', NULL),
-(5, '6594a7f814e90', 1, 17, 1, 105.00, 105.00, '2024-01-03', NULL);
+(5, '6594a7f814e90', 1, 17, 1, 105.00, 105.00, '2024-01-03', NULL),
+(6, '659d5fc7c0ae1', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(7, '659d6067bf70d', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(8, '659d6910d6ed2', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(9, '659d69e398798', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(10, '659d6a265e188', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(11, '659d6a6f56940', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(12, '659d6c54156c4', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(13, '659d6c5518a00', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(14, '659d78c414931', 1, 21, 1, 26.00, 26.00, '2024-01-09', NULL),
+(15, '659dbb8ce2a56', 1, 5, 1, 129.90, 129.90, '2024-01-09', NULL),
+(16, '659dbdc07ebe2', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(17, '659dbf22f1f07', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(18, '659dc051a83f4', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(19, '659dc49c655b2', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(20, '659dc6318d147', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(21, '659dc72e46f0f', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(22, '659dc898295ba', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(23, '659dc971af0ff', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(24, '659dce252c0e6', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(25, '659dceee2e8ca', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
+(26, '659dd1be5e3be', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
+(27, '659ddd9283c65', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
+(28, '659ddda9deaf7', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
+(29, '659dddae389f8', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
+(30, '659de49ba8459', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL);
 
 --
 -- Acionadores `tbl_vendas`
@@ -281,7 +285,7 @@ ALTER TABLE `tbl_vendas`
 -- AUTO_INCREMENT de tabela `tbl_categoria`
 --
 ALTER TABLE `tbl_categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_marca`
@@ -293,7 +297,7 @@ ALTER TABLE `tbl_marca`
 -- AUTO_INCREMENT de tabela `tbl_produtos`
 --
 ALTER TABLE `tbl_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_usuario`
@@ -305,7 +309,7 @@ ALTER TABLE `tbl_usuario`
 -- AUTO_INCREMENT de tabela `tbl_vendas`
 --
 ALTER TABLE `tbl_vendas`
-  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Restrições para tabelas despejadas
