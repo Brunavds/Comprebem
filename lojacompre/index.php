@@ -18,6 +18,7 @@
         /* Estilos para centralizar e estilizar o popup */
         #popup-container {
             display: none;
+            color: #000000;
             position: fixed;
             top: 50%;
             left: 50%;
