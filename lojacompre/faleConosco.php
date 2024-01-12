@@ -21,35 +21,32 @@
 	include 'conexao.php';
 	include 'nav.php';
     include 'cabecalho.html';
-	$Consulta = $cn -> query('select * from vw_produto where prod_lanc = "S"'); 
-	?>
-						<div >
-						
+?>
+	<div >
+	
 
-							<h1 class= "text">Fale Conosco</h1> 
-						
+		<h1 class= "text">Fale Conosco</h1> 
+	
 
-							<div class="cont">
-							<p>Se você tem duvidas ou suguestões entra em contato conosco através de :</p> 
-							<h4 class = "text1">Email: loja_comprebem@gmail.com</h4>
-							<h4 class = "text1">WhatsApp: (21) 3352-7125 </h4>
-							
-							
-							<p class="p">Siganos também nas redes sociais</p>
+		<div class="cont">
+		<p>Se você tem duvidas ou suguestões entra em contato conosco através de :</p> 
+		<h4 class = "text1">Email: loja_comprebem@gmail.com</h4>
+		<h4 class = "text1">WhatsApp: (21) 3352-7125 </h4>
+		
+		
+		<p class="p">Siganos também nas redes sociais</p>
 
-							<h4 class = "text1">Instagran: @Comprebem </h4>
-							<h4 class = "text1"> Facebook: CompreBem </h4>
-							</div>
+		<h4 class = "text1">Instagran: @Comprebem </h4>
+		<h4 class = "text1"> Facebook: CompreBem </h4>
+		</div>
 
-							<div>
-								<img class="img"src="Produtos/agente.jpg" alt="agente">
-							</div>
-         				</div> 
+		<div>
+			<img class="img"src="Produtos/agente.jpg" alt="agente">
+		</div>
+	</div> 
 
 
-					
-			</div><!-- fechamento da class="row" -->
-	</div><!-- fechamento da class="container-fluid" -->
+				
 	<br>
 	<br>
     <?php include 'rodape.html' ?>

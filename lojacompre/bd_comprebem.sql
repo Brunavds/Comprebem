@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/01/2024 às 01:41
--- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Tempo de geração: 12/01/2024 às 04:58
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,32 +44,6 @@ INSERT INTO `tbl_categoria` (`id_categoria`, `nm_categoria`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_marca`
---
-
-CREATE TABLE `tbl_marca` (
-  `id_marca` int(11) NOT NULL,
-  `nm_marca` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `tbl_marca`
---
-
-INSERT INTO `tbl_marca` (`id_marca`, `nm_marca`) VALUES
-(1, 'Chronic'),
-(2, 'Nike'),
-(3, 'Wanted'),
-(4, 'HIGH'),
-(5, 'Trasher'),
-(6, 'Diamond'),
-(7, 'Fire Appel'),
-(8, 'Overcome'),
-(9, 'Santa Cruz');
-
--- --------------------------------------------------------
-
---
 -- Estrutura para tabela `tbl_produtos`
 --
 
@@ -84,17 +58,18 @@ CREATE TABLE `tbl_produtos` (
   `id_marca` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `qtd_estoque` int(11) NOT NULL,
-  `prod_lanc` char(1) NOT NULL
+  `prod_lanc` char(1) NOT NULL,
+  `nm_marca` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `tbl_produtos`
 --
 
-INSERT INTO `tbl_produtos` (`id_produto`, `nm_nome`, `ds_resumo_produto`, `vl_produto`, `nm_color_produto`, `nm_artigo`, `ds_img`, `id_marca`, `id_categoria`, `qtd_estoque`, `prod_lanc`) VALUES
-(21, 'Calça Feminina Fitness', 'Calça Feminina Fitness Premium Academia Tarelles\r\nTecido: Suplex de Poliamida / Beach Gloss de Poliamida\r\nTecido de excelente qualidade e elasticidade\r\nTecido toque suave e brilho\r\nProteção UV 50\r\nCosturas reforçadas\r\nZero transparência\r\nNão possui bolso\r\n\r\nComposição: 84% Poliamida 16% Elastano', 26.00, 'Cinza e preto', '1,22', '901092c6e59413c5bca4e9365d7361f0.jpg', 2, 2, 15, 'N'),
-(24, 'Conjunto Mariana Rosa Infantil', 'Conjunto Infantil Mariana rosa com blusa branca de manga croc. Disponível para crianças de 3 a 7 anos.', 59.00, 'Rosa e Branco', '1,00', '451e9740a859e9b5ce48479abc0249a2.jpg', 6, 3, 20, 'S'),
-(25, 'Casaco Corta Vento Nike', 'Corta vento Nike com fecho duplo. Disponível do P ao GG.', 12500.00, 'Branco e Preto', '1,22', '9eb1b948b5a5cc23ab8da03b55af9864.png', 2, 9, 100, 'N');
+INSERT INTO `tbl_produtos` (`id_produto`, `nm_nome`, `ds_resumo_produto`, `vl_produto`, `nm_color_produto`, `nm_artigo`, `ds_img`, `id_marca`, `id_categoria`, `qtd_estoque`, `prod_lanc`, `nm_marca`) VALUES
+(21, 'Calça Feminina Fitness', 'Calça Feminina Fitness Premium Academia Tarelles\r\nTecido: Suplex de Poliamida / Beach Gloss de Poliamida\r\nTecido de excelente qualidade e elasticidade\r\nTecido toque suave e brilho\r\nProteção UV 50\r\nCosturas reforçadas\r\nZero transparência\r\nNão possui bolso\r\n\r\nComposição: 84% Poliamida 16% Elastano', 26.00, 'Cinza e preto', '1,22', '901092c6e59413c5bca4e9365d7361f0.jpg', 2, 2, 15, 'N', NULL),
+(24, 'Conjunto Mariana Rosa Infantil', 'Conjunto Infantil Mariana rosa com blusa branca de manga croc. Disponível para crianças de 3 a 7 anos.', 59.00, 'Rosa e Branco', '1,00', '451e9740a859e9b5ce48479abc0249a2.jpg', 6, 3, 20, 'S', NULL),
+(25, 'Casaco Corta Vento Nike', 'Corta vento Nike com fecho duplo. Disponível do P ao GG.', 12500.00, 'Branco e Preto', '1,22', '9eb1b948b5a5cc23ab8da03b55af9864.png', 2, 9, 100, 'N', NULL);
 
 -- --------------------------------------------------------
 
@@ -204,7 +179,6 @@ CREATE TABLE `vw_produto` (
 ,`ds_img` varchar(255)
 ,`qtd_estoque` int(11)
 ,`prod_lanc` char(1)
-,`nm_marca` varchar(45)
 ,`nm_categoria` varchar(45)
 );
 
@@ -230,7 +204,7 @@ CREATE TABLE `vw_venda` (
 --
 DROP TABLE IF EXISTS `vw_produto`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_produto`  AS SELECT `tbl_produtos`.`id_produto` AS `id_produto`, `tbl_produtos`.`nm_nome` AS `nm_nome`, `tbl_produtos`.`ds_resumo_produto` AS `ds_resumo_produto`, `tbl_produtos`.`vl_produto` AS `vl_produto`, `tbl_produtos`.`nm_color_produto` AS `nm_color_produto`, `tbl_produtos`.`nm_artigo` AS `nm_artigo`, `tbl_produtos`.`ds_img` AS `ds_img`, `tbl_produtos`.`qtd_estoque` AS `qtd_estoque`, `tbl_produtos`.`prod_lanc` AS `prod_lanc`, `tbl_marca`.`nm_marca` AS `nm_marca`, `tbl_categoria`.`nm_categoria` AS `nm_categoria` FROM ((`tbl_produtos` join `tbl_categoria` on(`tbl_produtos`.`id_categoria` = `tbl_categoria`.`id_categoria`)) join `tbl_marca` on(`tbl_produtos`.`id_marca` = `tbl_marca`.`id_marca`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_produto`  AS SELECT `tbl_produtos`.`id_produto` AS `id_produto`, `tbl_produtos`.`nm_nome` AS `nm_nome`, `tbl_produtos`.`ds_resumo_produto` AS `ds_resumo_produto`, `tbl_produtos`.`vl_produto` AS `vl_produto`, `tbl_produtos`.`nm_color_produto` AS `nm_color_produto`, `tbl_produtos`.`nm_artigo` AS `nm_artigo`, `tbl_produtos`.`ds_img` AS `ds_img`, `tbl_produtos`.`qtd_estoque` AS `qtd_estoque`, `tbl_produtos`.`prod_lanc` AS `prod_lanc`, `tbl_categoria`.`nm_categoria` AS `nm_categoria` FROM (`tbl_produtos` join `tbl_categoria` on(`tbl_produtos`.`id_categoria` = `tbl_categoria`.`id_categoria`)) ;
 
 -- --------------------------------------------------------
 
@@ -250,12 +224,6 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 ALTER TABLE `tbl_categoria`
   ADD PRIMARY KEY (`id_categoria`);
-
---
--- Índices de tabela `tbl_marca`
---
-ALTER TABLE `tbl_marca`
-  ADD PRIMARY KEY (`id_marca`);
 
 --
 -- Índices de tabela `tbl_produtos`
@@ -288,12 +256,6 @@ ALTER TABLE `tbl_categoria`
   MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de tabela `tbl_marca`
---
-ALTER TABLE `tbl_marca`
-  MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
 -- AUTO_INCREMENT de tabela `tbl_produtos`
 --
 ALTER TABLE `tbl_produtos`
@@ -319,8 +281,7 @@ ALTER TABLE `tbl_vendas`
 -- Restrições para tabelas `tbl_produtos`
 --
 ALTER TABLE `tbl_produtos`
-  ADD CONSTRAINT `fk_cole` FOREIGN KEY (`id_categoria`) REFERENCES `tbl_categoria` (`id_categoria`),
-  ADD CONSTRAINT `fk_marca` FOREIGN KEY (`id_marca`) REFERENCES `tbl_marca` (`id_marca`);
+  ADD CONSTRAINT `fk_cole` FOREIGN KEY (`id_categoria`) REFERENCES `tbl_categoria` (`id_categoria`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
