@@ -36,7 +36,7 @@
 	$consulta = $cn->query("SELECT * FROM tbl_produtos WHERE id_produto='$cd'");	
 	$exibe = $consulta->fetch(PDO::FETCH_ASSOC);
 	$consultaCat = $cn->query("SELECT id_categoria, nm_categoria FROM tbl_categoria where id_categoria='$cd2' union select id_categoria, nm_categoria FROM tbl_categoria where id_categoria !='$cd2'");
-	$consultaMarca = $cn->query("SELECT id_marca, nm_marca FROM tbl_marca where id_marca='$cd3' union select id_marca, nm_marca FROM tbl_marca where id_marca !='$cd3'");
+
 	?>
 	<div class="container-fluid">
 		<div class="row">
@@ -48,14 +48,8 @@
 						<input type="text" name="txtnome" value="<?php echo $exibe['nm_nome']; ?>"  class="form-control" required id="txtnome">
 					</div>
 					<div class="form-group">
-						<label for="sltmarca">Marca</label>
-						<select class="form-control" name="sltmarca">
-							<?php					
-								while($exibeautor = $consultaMarca->fetch(PDO::FETCH_ASSOC)){
-							?>
-							<option value="<?php echo $exibeautor['id_marca'];?>"><?php echo $exibeautor['nm_marca'];?></option>;
-							<?php }	?>	
-						</select>
+					<label for="txtmarca">Marca</label>
+					<input type="text" class="form-control" value="<?php echo $exibe['nm_marca']; ?>" name="txtmarca" required id="txtmarca">
 					</div>
                     <div class="form-group">
 						<label for="sltcat">Categoria</label>

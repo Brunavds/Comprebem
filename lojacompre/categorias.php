@@ -27,6 +27,7 @@
 				<?php $Consulta = $cn -> query("select * from vw_produto where nm_categoria = '$cat'"); 
 					while($Exibir = $Consulta -> fetch(PDO::FETCH_ASSOC))
 					{ ?>
+					<!-- mb_strimwidth é uma função em PHP que é usada para truncar uma string para um comprimento especificado -->
 						<div class="col-sm-3">
 							<img src="Produtos/<?php echo $Exibir['ds_img']; ?>" class="img-responsive" style="width:100%">
 							<div><h3><b><?php echo mb_strimwidth($Exibir['nm_nome'],0,30,'...'); ?></b></h3></div>

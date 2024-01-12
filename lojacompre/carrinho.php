@@ -79,6 +79,9 @@ use Dompdf\Options;
 	}	
 	?> 
 
+<?php  
+
+	if(!empty($_SESSION['carrinho']) && $_SESSION['carrinho'] >= 1){  ?>
 
 	<!-- selecionar Forma de pagamento -->
 <div class="row text-center" style="margin-top: 15px;"> 
@@ -109,6 +112,12 @@ use Dompdf\Options;
     
 </div>
 
+<?php 
+
+} else{
+	echo '<div class="row text-center" style="margin-top: 15px;">Faça suas compras e aproveite nossa facilidade de pagamento em até 50 vezes sem juros! </div>';
+}
+?>
 
 	<!-- exibindo o valor da variavel total da compra -->
 	<div class="row text-center" style="margin-top: 15px;">

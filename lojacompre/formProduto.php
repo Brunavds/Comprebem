@@ -33,7 +33,7 @@
 	include 'cabecalho.html';
 
     $consultaCategoria = $cn-> query("select * from tbl_categoria");
-    $consultaMarca = $cn-> query("select * from tbl_marca");
+
 	?>
 	<div class="container-fluid">
 		<div+ class="row">
@@ -54,13 +54,8 @@
 					</select>
 					</div>
 				    <div class="form-group">
-					<label for="sltautor">Marca</label>
-					<select class="form-control" name="sltmarca">
-					  <option value="">Selecione</option>
-                      <?php while($lista = $consultaMarca -> fetch(PDO::FETCH_ASSOC)) { ?>
-					  <option value="<?php echo $lista['id_marca']?>"><?php echo $lista['nm_marca']?></option>
-                      <?php } ?>
-					</select>
+						<label for="txtmarca">Marca</label>
+						<input type="txtmarca" type="text" class="form-control" required id="textmarca">
 					</div>
 					<div class="form-group">
 					<label for="txtcor">Cor</label>

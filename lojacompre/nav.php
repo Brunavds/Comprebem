@@ -24,20 +24,6 @@
                     <li><a href="categorias.php?cat=Infantil">Infantil</a></li>
                 </ul>
                 </li>
-                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Marcas <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="marcas.php?cat=Chronic">Chronic</a></li>
-                    <li><a href="marcas.php?cat=Nike">Nike</a></li>
-                    <li><a href="marcas.php?cat=Wanted">Wanted</a></li>
-                    <li><a href="marcas.php?cat=HIGH">HIGH</a></li>
-                    <li><a href="marcas.php?cat=Trasher">Trasher</a></li>
-                    <li><a href="marcas.php?cat=Diamond">Diamond</a></li>
-                    <li><a href="marcas.php?cat=Fire Appel">Fire Appel</a></li>
-                    <li><a href="marcas.php?cat=Overcome">Overcome</a></li>
-                    <li><a href="marcas.php?cat=Santa Cruz">Santa Cruz</a></li>
-                </ul>
-                </li>
                 <li><a href="faleConosco.php">Fale Conosco</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
