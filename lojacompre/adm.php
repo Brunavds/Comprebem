@@ -36,14 +36,14 @@
 				</a>
                 <br>
                 <a href="lista.php" style="text-decoration:none;">
-				<button type="submit" class="btn btn-block btn-lg btn-warning">	Alterar / Excluir Produto</button>
+				<button type="submit" class="btn btn-block btn-lg btn-primary">	Alterar / Excluir Produto</button>
                 </a>
                 <br>
                 <a href="vendas.php" style="text-decoration:none;">
-				<button type="submit" class="btn btn-block btn-lg btn-success"> Vendas</button>
+				<button type="submit" class="btn btn-block btn-lg btn-primary"> Vendas</button>
                 <br>
                 <a href="clientesCadastro.php" style="text-decoration:none;">
-				<button type="submit" class="btn btn-block btn-lg btn-success"> Gerenciamento Clientes </button>
+				<button type="submit" class="btn btn-block btn-lg btn-primary"> Gerenciamento Clientes </button>
                 <br>
                 <a href="nvcategoria.php" style="text-decoration:none;">			
 				<button type="submit" class="btn btn-block btn-lg btn-primary"> Adicionar Categoria</button>
@@ -55,6 +55,51 @@
 			</div>
 		</div>
 	</div>
+    <br>
+    <br>
+
+    <div style="display: flex; margin-right: 10px;">
+        <div class="card" style=" border-radius: 15px;width: 18rem; padding: 2px;margin: 20px;box-sizing: border-box;background:#94dbff; display: flex;font-family: arial;">
+        <div class="card-body">
+            <h5 class="card-title">Fique atento!</h5>
+            <h5 class="card-subtitle mb-2 text-body-secondary">Gestor,</h5>
+            <p class="card-text">Fique atento ao prazo para renovação de termos de segurança, sua privacidade é muito importante!</p>
+            <a href="#" class="card-link" style="color:red;">Termo de Privacidade</a>
+            <a href="#" class="card-link" style="color:red;">Duvidas</a>
+        </div>
+        </div>
+
+        <div class="card" style=" border-radius: 15px;width: 18rem; padding: 2px;margin: 20px;box-sizing: border-box;background:#94dbff; display: flex;font-family: arial;">
+        <div class="card-body">
+            <h5 class="card-title">Relatorios</h5>
+            <p class="card-text">Duvidas sobre relatorios, prazos, solicitações e reclamaçoes entre em contato com nosso supoerte de seg á sex das 08h ás 17h.</p>
+            <p style="color:red;"> (11)2396-7785 </p>
+        </div>
+        </div>
+
+        <div class="card" style=" border-radius: 15px;width: 18rem; padding: 2px;margin: 20px;box-sizing: border-box;background:#94dbff; display: flex;font-family: arial;">
+        <div class="card-body">
+            <h5 class="card-title">Fique atento!</h5>
+            <p class="card-text">O prazo para pagamento da hospedagem está próxima do vencimento, não deixe para depois. Evite filas realizando o pagemnto via pix.</p>
+            <a href="#" class="card-link" style="color:red;">Fatura</a>
+            <br>
+            <a href="#" class="card-link" style="color:red;">Gerar Código pix</a>
+        </div>
+        </div>
+
+        <div class="card" style=" border-radius: 15px;width: 18rem; padding: 2px;margin: 20px;box-sizing: border-box;background:#94dbff; display: flex;font-family: arial;">
+        <div class="card-body">
+            <h5 class="card-title">Fique atento!</h5>
+            <h5 class="card-subtitle mb-2 text-body-secondary">Gestor,</h5>
+            <p class="card-text">Fique atento ao prazo para renovação de termos de segurança, sua privacidade é muito importante!</p>
+            <a href="#" class="card-link" style="color:red;">Termo de Privacidade</a>
+            <a href="#" class="card-link" style="color:red;">Duvidas</a>
+        </div>
+        </div>
+        
+    
+    </div>
+    
     <br>
     <br>
 	<?php include 'rodape.html' ?>

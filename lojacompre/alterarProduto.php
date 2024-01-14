@@ -11,7 +11,7 @@ $exibe = $consulta->fetch(PDO::FETCH_ASSOC);
 
 // todas as laterações feitas nos campos serão salvas nas variaveis abaixo
 $nome = $_POST['txtnome']; 
-$marca = $_POST['sltmarca'];
+$marca = $_POST['txtmarca'];
 $categoria = $_POST['sltcat'];
 $cor = $_POST['txtcor'];
 $artigo = $_POST['txtartigo'];
@@ -44,7 +44,7 @@ try // comando update para realizar as trocas
 {
 	$alterar = $cn->query("UPDATE tbl_produtos SET  
     nm_nome = '$nome',
-    id_marca = '$marca',
+    nm_marca = '$marca',
     id_categoria = '$categoria',
     nm_color_produto = '$cor',
     nm_artigo= '$artigo',

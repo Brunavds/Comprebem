@@ -8,11 +8,12 @@
     <link rel="icon" href="./Logos/Logotipo Escuro.png">
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="estilo.css">
+	
 
 	<style>
         /* Estilos para centralizar e estilizar o popup */
@@ -70,7 +71,7 @@
     include 'cabecalho.html';
 	$Consulta = $cn->query('SELECT * FROM vw_produto'); //aqui vai o nome da tabela que armazena os produtos.
 	?>
-
+    
     <div class="container-fluid text-center">
 			<div class="row">
 				<?php
@@ -106,7 +107,7 @@
 			</div><!-- fechamento da class="row" -->
 	</div><!-- fechamento da class="container-fluid" -->
 	<br>
-	<br>
+	<br> 
     <?php include 'rodape.html' ?> 
 
 

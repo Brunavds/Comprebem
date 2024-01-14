@@ -25,7 +25,7 @@
 
 	if(!empty($_GET['id'])){
 		$idproduto = $_GET['id'];
-		$consulta = $cn->query("select * from vw_produto where id_produto = '$idproduto'");
+		$consulta = $cn->query("select * from tbl_produtos where id_produto = '$idproduto'");
 		$exibir = $consulta->fetch(PDO::FETCH_ASSOC);
 	}else{
 		header("location:index.php");

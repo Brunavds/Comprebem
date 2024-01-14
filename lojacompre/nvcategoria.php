@@ -30,12 +30,27 @@
 	?>
 
 
+<div class="container-fluid">
+		<div+ class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+				<form method="post" action="request_categoria.php" name="novaCategoria" enctype="multipart/form-data">
+					<div class="form-group">
+						<label for="txtnome">Nova Categoria</label>
+						<input name="txtnome" type="text" class="form-control" required id="txtnome">
+					</div>
+					
+            </div>
+                <button type="submit" class="btn btn-lg btn-primary">
+                <span class="glyphicon glyphicon-pencil"></span> Cadastrar
+                </button>
+				</form>
+			</div>
+		</div+>
+	</div>
 
 
 
 
 
-
-<?php include 'rodape.html' ?>
 </body>
 </html>

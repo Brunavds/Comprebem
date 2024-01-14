@@ -17,7 +17,7 @@
     <script>
     $(document).ready(function()
     {
-        $('#txtpreco').mask('0.000.000,00', {reverse: true});
+        $('#txtpreco').mask('000,00', {reverse: true});
     });
     </script>
 </head>
@@ -54,8 +54,8 @@
 					</select>
 					</div>
 				    <div class="form-group">
-						<label for="txtmarca">Marca</label>
-						<input type="txtmarca" type="text" class="form-control" required id="textmarca">
+					<label for="txtmarca">Marca</label>
+					<input type="txtmarca" type="text" class="form-control" required id="txtmarca">
 					</div>
 					<div class="form-group">
 					<label for="txtcor">Cor</label>

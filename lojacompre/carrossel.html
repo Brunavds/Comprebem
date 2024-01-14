@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrosselstyle.css">
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div class="slide" id="slide1">
+            <img src="imagem1.jpg" alt="Imagem 1">
+        </div>
+        <div class="slide" id="slide2">
+            <img src="imagem2.jpg" alt="Imagem 2">
+        </div>
+        <div class="slide" id="slide3">
+            <img src="imagem3.jpg" alt="Imagem 3">
+        </div>
+
+        <button class="prev" onclick="prevSlide()">&#9664;</button>
+        <button class="next" onclick="nextSlide()">&#9654;</button>
+
+                 <!-- JavaScript -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+             function showSlide(index) {
+                 slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+            }
+
+             function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+            }
+
+            function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+            }
+
+              // Adicionando transição automática
+            setInterval(function() {
+            nextSlide();
+            }, 5000);  // Mude o valor para ajustar a velocidade da transição (em milissegundos)
+
+            // Mostrar o primeiro slide ao carregar a página
+            showSlide(currentIndex);
+             });
+    </script>
+    </div>
+
+    
+</body>
+</html>

@@ -1,3 +1,11 @@
+<?php
+include 'conexao.php';
+
+// Consulta SQL para obter todas as categorias
+$queryCategorias = $cn->query("SELECT id_categoria, nm_categoria FROM tbl_categoria");
+$categorias = $queryCategorias->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #000000; border-radius:0; border-bottom: 3px solid #fdeb00;">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -19,11 +27,15 @@
                 <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="categorias.php?cat=Peita">Masculino</a></li>
-                    <li><a href="categorias.php?cat=Feminino">Feminino</a></li>
-                    <li><a href="categorias.php?cat=Infantil">Infantil</a></li>
-                </ul>
+                <?php
+                // Exibe as categorias na dropdown menu
+                foreach ($categorias as $categoria) {
+                    echo '<li><a href="categorias.php?cat=' . urlencode($categoria['nm_categoria']) . '">' . $categoria['nm_categoria'] . '</a></li>';
+                }
+                ?>
+            </ul>
                 </li>
+
                 <li><a href="faleConosco.php">Fale Conosco</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

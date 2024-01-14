@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <title>Comprebrem</title>
+    <title>Comprebem - Categorias</title>
     <meta name="Author" content="Grupo Senac">
     <link rel="icon" href="./Logos/Logotipo Escuro.png">
     <!-- CSS -->
@@ -17,6 +15,13 @@
 	<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+<?php 
+	session_start();
+	include 'conexao.php';
+	include 'nav.php';
+    include 'cabecalho.html';	
+?>
+    <div style="text-position:center;">
     <h2>Lista de Vendas</h2>
     <table class="table">
         <tr>
@@ -28,18 +33,14 @@
             <th>Data</th>
             <th>Forma de Pagamento</th>
         </tr>
+    </div>
         <?php
-        
-        session_start();
 
         if(empty($_SESSION['Status']) || $_SESSION['Status'] != 1){
             header('location:index.php');
         }
 
-        include 'conexao.php';	// incluindo arquivo de conexao
-        include 'nav.php'; // incluindo arquivo barra de navegação
-        include 'cabecalho.html'; // incluindo cabeçalho
-
+    
         // Consulta para obter todas as vendas
         $sql = "SELECT * FROM tbl_vendas";
         $resultado = $cn->query($sql);

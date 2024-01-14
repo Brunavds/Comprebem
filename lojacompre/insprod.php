@@ -5,8 +5,7 @@ include 'resize-class.php';
 //variáveis que vão receber os dados do formulário que esta na pagina formProduto
 $nome = $_POST['txtnome'];
 $categoria = $_POST['sltcat'];  // recebendo o valor do campo select, valor numérico
-$marca = $_POST['sltmarca']; // recebendo o valor do campo select, valor numérico
-$drop = $_POST['txtdrop'];
+$marca = $_POST['txtmarca'];
 $cor = $_POST['txtcor'];
 $preco = $_POST['txtpreco'];
 $qtde = $_POST['txtqtde'];
@@ -34,7 +33,7 @@ $img_nome1 = md5(uniqid(time())).".".$extencao1[1];
 
 try // try para tentar inserir
 {
-    $inserir=$cn->query("insert into tbl_produtos(nm_nome, id_categoria, id_marca, nm_artigo, nm_color_produto, vl_produto, qtd_estoque, ds_resumo_produto, ds_img, prod_lanc) VALUES ('$nome', '$categoria', '$marca', '$drop', '$cor', '$preco', '$qtde', '$resumo', '$img_nome1', '$lanc')");
+    $inserir = $cn->query("INSERT INTO tbl_produtos(nm_nome, id_categoria, nm_marca, nm_artigo, nm_color_produto, vl_produto, qtd_estoque, ds_resumo_produto, ds_img, prod_lanc) VALUES ('$nome', '$categoria', '$marca', '$drop', '$cor', '$preco', '$qtde', '$resumo', '$img_nome1', '$lanc')");
     move_uploaded_file($recebe_foto1['tmp_name'], $destino.$img_nome1);             
     $resizeObj = new resize($destino.$img_nome1);
     $resizeObj -> resizeImage(1024, 1280, 'crop');
