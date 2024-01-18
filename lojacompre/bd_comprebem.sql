@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/01/2024 às 04:58
+-- Tempo de geração: 18/01/2024 às 16:43
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -39,7 +39,8 @@ CREATE TABLE `tbl_categoria` (
 INSERT INTO `tbl_categoria` (`id_categoria`, `nm_categoria`) VALUES
 (2, 'Feminino'),
 (3, 'Infantil'),
-(9, 'Masculino');
+(9, 'Masculino'),
+(10, 'Moda Praia');
 
 -- --------------------------------------------------------
 
@@ -59,7 +60,7 @@ CREATE TABLE `tbl_produtos` (
   `id_categoria` int(11) NOT NULL,
   `qtd_estoque` int(11) NOT NULL,
   `prod_lanc` char(1) NOT NULL,
-  `nm_marca` varchar(50) DEFAULT NULL
+  `nm_marca` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -67,9 +68,10 @@ CREATE TABLE `tbl_produtos` (
 --
 
 INSERT INTO `tbl_produtos` (`id_produto`, `nm_nome`, `ds_resumo_produto`, `vl_produto`, `nm_color_produto`, `nm_artigo`, `ds_img`, `id_marca`, `id_categoria`, `qtd_estoque`, `prod_lanc`, `nm_marca`) VALUES
-(21, 'Calça Feminina Fitness', 'Calça Feminina Fitness Premium Academia Tarelles\r\nTecido: Suplex de Poliamida / Beach Gloss de Poliamida\r\nTecido de excelente qualidade e elasticidade\r\nTecido toque suave e brilho\r\nProteção UV 50\r\nCosturas reforçadas\r\nZero transparência\r\nNão possui bolso\r\n\r\nComposição: 84% Poliamida 16% Elastano', 26.00, 'Cinza e preto', '1,22', '901092c6e59413c5bca4e9365d7361f0.jpg', 2, 2, 15, 'N', NULL),
-(24, 'Conjunto Mariana Rosa Infantil', 'Conjunto Infantil Mariana rosa com blusa branca de manga croc. Disponível para crianças de 3 a 7 anos.', 59.00, 'Rosa e Branco', '1,00', '451e9740a859e9b5ce48479abc0249a2.jpg', 6, 3, 20, 'S', NULL),
-(25, 'Casaco Corta Vento Nike', 'Corta vento Nike com fecho duplo. Disponível do P ao GG.', 12500.00, 'Branco e Preto', '1,22', '9eb1b948b5a5cc23ab8da03b55af9864.png', 2, 9, 100, 'N', NULL);
+(21, 'Calça Feminina Fitness', 'Calça Feminina Fitness Premium Academia Tarelles\r\nTecido: Suplex de Poliamida / Beach Gloss de Poliamida\r\nTecido de excelente qualidade e elasticidade\r\nTecido toque suave e brilho\r\nProteção UV 50\r\nCosturas reforçadas\r\nZero transparência\r\nNão possui bolso\r\n\r\nComposição: 84% Poliamida 16% Elastano', 7500.00, 'Cinza e preto', '1,22', '901092c6e59413c5bca4e9365d7361f0.jpg', 0, 2, 60, 'N', 'Nike'),
+(24, 'Conjunto Mariana Rosa Infantil', 'Conjunto Infantil Mariana rosa com blusa branca de manga croc. Disponível para crianças de 3 a 7 anos.', 5900.00, 'Rosa e Branco', '1,00', '451e9740a859e9b5ce48479abc0249a2.jpg', 6, 3, 20, 'S', 'Lilica'),
+(25, 'Casaco Corta Vento Nike', 'Corta vento Nike com fecho duplo. Disponível do P ao GG.', 12500.00, 'Branco e Preto', '1,22', '9eb1b948b5a5cc23ab8da03b55af9864.png', 0, 9, 100, 'N', 'Nike'),
+(30, 'Kit Biquíni + Saída de Praia Cherry', 'Lindo conjunto de biquíni com saída de praia do P ao GG que , tecido de Lycra.', 17900.00, 'Branco', '1,22', 'd7a5c2b21a9354c5ebe3957a2085fe91.jpg', 0, 10, 100, 'S', 'Cherry');
 
 -- --------------------------------------------------------
 
@@ -83,7 +85,7 @@ CREATE TABLE `tbl_usuario` (
   `sbnm_usuario` varchar(80) NOT NULL,
   `cell_usuario` char(15) NOT NULL,
   `desc_email` varchar(80) NOT NULL,
-  `desc_senha` char(10) NOT NULL,
+  `desc_senha` varchar(255) DEFAULT NULL,
   `desc_status` tinyint(1) NOT NULL,
   `desc_endereco` varchar(80) NOT NULL,
   `desc_cidade` varchar(30) NOT NULL,
@@ -95,9 +97,11 @@ CREATE TABLE `tbl_usuario` (
 --
 
 INSERT INTO `tbl_usuario` (`id_usuario`, `nm_usuario`, `sbnm_usuario`, `cell_usuario`, `desc_email`, `desc_senha`, `desc_status`, `desc_endereco`, `desc_cidade`, `num_cep`) VALUES
-(1, 'Bruna', 'Vieira', '991527145', 'br.vieiradasilva@gmail.com', '456789', 12, 'Rua Ar', 'Nova Iguaçu', '26050131'),
 (2, 'Yasmin', 'Santos', '(21) 96578-1313', 'yas@gmail.com', '123456', 0, 'Rua Bastos Costa', 'Nova Iguaçu', '26 770-211'),
-(3, 'Jacira Santos', 'Ferreira', '(21) 96685-1673', 'jaci@gmail.com', '123456', 0, 'Ruas Bastos ,75', 'Nova Iguaçu', '26 070-221');
+(3, 'Jacira Santos', 'Ferreira', '(21) 96685-1673', 'jaci@gmail.com', '123456', 0, 'Ruas Bastos ,75', 'Nova Iguaçu', '26 070-221'),
+(4, 'Sabrina', 'Silva', '(21) 97765-8421', 'sab.soares@gmail.com', '123456', 0, 'Rua Oscilio Maiaa', 'Rio de Janeiro', '24 010-221'),
+(5, 'Tadeu', 'Santos', '(21) 97855-4221', 'tad@gmail.com', '$2y$10$5EK', 0, 'Rua Cascavel ', 'Peracanjuba', '26 070-221'),
+(6, 'Bruna', 'Vieia', '(21) 97765-8421', 'br.vieiradasilva@gmail.com', '$2y$10$sTb', 0, 'Rua Cascavel ', 'Rio de Janeiro', '24 010-221');
 
 -- --------------------------------------------------------
 
@@ -146,12 +150,14 @@ INSERT INTO `tbl_vendas` (`id_venda`, `nm_ticket`, `id_cliente`, `id_produto`, `
 (22, '659dc898295ba', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
 (23, '659dc971af0ff', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
 (24, '659dce252c0e6', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
-(25, '659dceee2e8ca', 1, 5, 2, 129.90, 259.80, '2024-01-09', NULL),
 (26, '659dd1be5e3be', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
 (27, '659ddd9283c65', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
 (28, '659ddda9deaf7', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
 (29, '659dddae389f8', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
-(30, '659de49ba8459', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL);
+(30, '659de49ba8459', 1, 5, 2, 129.90, 259.80, '2024-01-10', NULL),
+(31, '65a165ef0fa82', 1, 24, 1, 59.00, 59.00, '2024-01-12', NULL),
+(32, '65a1661c70988', 1, 24, 1, 59.00, 59.00, '2024-01-12', NULL),
+(33, '65a46c271348c', 1, 30, 1, 17900.00, 17900.00, '2024-01-15', NULL);
 
 --
 -- Acionadores `tbl_vendas`
@@ -253,25 +259,25 @@ ALTER TABLE `tbl_vendas`
 -- AUTO_INCREMENT de tabela `tbl_categoria`
 --
 ALTER TABLE `tbl_categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_produtos`
 --
 ALTER TABLE `tbl_produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_usuario`
 --
 ALTER TABLE `tbl_usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_vendas`
 --
 ALTER TABLE `tbl_vendas`
-  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_venda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- Restrições para tabelas despejadas
